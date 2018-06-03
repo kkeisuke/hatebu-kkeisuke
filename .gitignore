@@ -1,0 +1,5 @@
+.DS_Store
+node_modules
+tmp
+env.js
+dist/index.js
