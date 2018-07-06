@@ -11,7 +11,8 @@
     "build": "webpack",
     "postinstall": "webpack",
     "push": "node dist/index.js push",
-    "date": "node dist/index.js date"
+    "date": "node dist/index.js date",
+    "all": "node dist/index.js all"
   },
   "license": "MIT",
   "dependencies": {
