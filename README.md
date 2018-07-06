@@ -16,7 +16,7 @@ https://hatebu.kkeisuke.com/
 
 ## セットアップ & ビルド
 
-環境変数は `env.js.sample` から `env.js` を作成し、`GITHUB_API_TOKEN` を追加します。
+環境変数は `env.js.sample` から `env.js` を作成し、`GITHUB_API_TOKEN` を追加します。
 
 ```shell
 # webpack ビルド
@@ -33,7 +33,7 @@ npm run date <日時>
 # 例：npm run push 20180705
 npm run push <日時>
 
-# 全ブックマークデータを対象に markdown ファイルをローカルに作成します。
+# 全ブックマークデータを対象に markdown ファイルをローカルに作成します。
 npm run all
 ```
 
