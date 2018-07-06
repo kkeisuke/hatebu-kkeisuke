@@ -6,7 +6,7 @@
 
 ![構成図](https://plantuml-server.kkeisuke.app/png/UDfLKJrFmq0CtVqh_0SwTCs0seaW0KA2BJ04SlbGqqkLN5Invf0e4mX4CnI1a61222GO2_mOa_mEBkab3TCzsyz-Vhv18knOfECGm39P78rIt3_ncPE6B3v2Ey6aYS3oRS6uZSEzhRgo2i7Q38IP7jSfBn1DZCF996cI5GPhbuamS4_h95zXiCGq449hQGpGYc8l3ZnVz3Qqce7zCd_k5ulxGqxodEIIif_YSbvyvy0ZmJ1ahi38xQoDEBRZaHDDkO8aRobxfEo9vCllrrqvkmB67QnQkw8LMscgpOssMmbc7oGVI4gICr2rzNBQee5TIgMbGFO6kjpErJuDB1UVvVoTickIP_LIotQqfkexgScLsvpag-BzjzgS4j5ClQXw3dQs5Vz6UIHviJO80mNLL_y1QApH3000.png)
 
-## コミット先
+## コミット先
 
 https://github.com/kkeisuke/hatebu-kkeisuke-client
 
