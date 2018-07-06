@@ -24,16 +24,16 @@ https://hatebu.kkeisuke.com/
 npm run build
 
 # 指定日時以降の markdown ファイルをローカルに作成します。
-# 日時を省略した場合は前日が指定されます。
+# 日時を省略した場合は前日が指定されます。
 # 例：npm run date 20180705
 npm run date <日時>
 
-# 指定日時以降の markdown ファイルを GitHub に push します。
-# 日時を省略した場合は前日が指定されます。
+# 指定日時以降の markdown ファイルを GitHub に push します。
+# 日時を省略した場合は前日が指定されます。
 # 例：npm run push 20180705
 npm run push <日時>
 
-# 全ブックマークデータを対象に markdown ファイルをローカルに作成します。
+# 全ブックマークデータを対象に markdown ファイルをローカルに作成します。
 npm run all
 ```
 
