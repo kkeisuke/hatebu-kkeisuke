@@ -1,6 +1,7 @@
 'use strict'
 
-const octokit = require('@octokit/rest')()
+const Octokit = require('@octokit/rest')
+let octokit = null
 
 const owner = GITHUB_OWNER
 const repo = GITHUB_REPO
@@ -18,15 +19,13 @@ export default {
    */
   authenticate() {
     if (!GITHUB_API_TOKEN) {
-      return false
+      return null
     }
-    octokit.authenticate({
-      type: 'token',
-      token: GITHUB_API_TOKEN
-    })
     // console.log('GITHUB_API_TOKEN', GITHUB_API_TOKEN)
 
-    return true
+    return new Octokit({
+      auth: `token ${GITHUB_API_TOKEN}`
+    })
   },
   /**
    * Blob を作成します。
@@ -39,7 +38,7 @@ export default {
       for (let i = 0; i < num; i++) {
         const md = markdowns[i]
         const content = Buffer.from(md.content).toString()
-        const blob = await octokit.gitdata.createBlob({ owner, repo, content })
+        const blob = await octokit.git.createBlob({ owner, repo, content })
         console.log('Blob SHA1', blob.data.sha)
         tree.push({
           path: md.path,
@@ -64,7 +63,7 @@ export default {
    */
   async createTree(tree, base_tree) {
     try {
-      const newTree = await octokit.gitdata.createTree({ owner, repo, tree, base_tree })
+      const newTree = await octokit.git.createTree({ owner, repo, tree, base_tree })
       return new Promise((resolve, reject) => {
         resolve(newTree.data.sha)
       })
@@ -79,20 +78,21 @@ export default {
    * @param {any[]} markdowns マークダウンファイルの配列
    */
   async push(markdowns) {
-    if (!this.authenticate()) {
+    octokit = this.authenticate()
+    if (!octokit) {
       return new Promise((resolve, reject) => {
         reject('GITHUB_API_TOKEN がありません')
       })
     }
 
     try {
-      const latestRef = await octokit.gitdata.getReference({ owner, repo, ref })
+      const latestRef = await octokit.git.getRef({ owner, repo, ref })
       const commit_sha = latestRef.data.object.sha
       console.log('commit_sha', commit_sha)
 
       // Get the current commit object
       // Retrieve the tree it points to
-      const latestCommit = await octokit.gitdata.getCommit({ owner, repo, commit_sha })
+      const latestCommit = await octokit.git.getCommit({ owner, repo, commit_sha })
       const base_tree = latestCommit.data.tree.sha
       console.log('base_tree', base_tree)
 
@@ -106,12 +106,12 @@ export default {
 
       // Create a new commit object with the current commit SHA as the parent and the new tree SHA, getting a commit SHA back
       const parents = [latestCommit.data.sha]
-      const newCommit = await octokit.gitdata.createCommit({ owner, repo, message, tree, parents })
+      const newCommit = await octokit.git.createCommit({ owner, repo, message, tree, parents })
       const sha = newCommit.data.sha
       console.log('SHA1', sha)
 
       // Update the reference of your branch to point to the new commit SHA
-      const result = await octokit.gitdata.updateReference({ owner, repo, ref, sha })
+      const result = await octokit.git.updateRef({ owner, repo, ref, sha })
       console.log('SHA1', result.data.object.sha)
 
       return new Promise((resolve, reject) => {

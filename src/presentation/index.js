@@ -6,34 +6,16 @@ import markdownToGitHubApp from '../application/MarkdownToGitHubApp'
 
 const cli = cac()
 
-cli.command(
-  'all',
-  {
-    desc: 'ローカルで Markdown ファイルをビルドします。'
-  },
-  () => {
-    hatebuToMarkdownApp.createHatebuToMarkdownAll()
-  }
-)
+cli.command('all', 'ローカルで Markdown ファイルをビルドします。').action(() => {
+  hatebuToMarkdownApp.createHatebuToMarkdownAll()
+})
 
-cli.command(
-  'date',
-  {
-    desc: 'ローカルで Markdown ファイルをビルドします。'
-  },
-  input => {
-    hatebuToMarkdownApp.createHatebuToMarkdown(input[0])
-  }
-)
+cli.command('date', 'ローカルで Markdown ファイルをビルドします。').action(input => {
+  hatebuToMarkdownApp.createHatebuToMarkdown(input[0])
+})
 
-cli.command(
-  'push',
-  {
-    desc: 'Markdown ファイルを GitHub に push します。'
-  },
-  input => {
-    markdownToGitHubApp.push(input[0])
-  }
-)
+cli.command('push', 'Markdown ファイルを GitHub に push します。').action(input => {
+  markdownToGitHubApp.push(input[0])
+})
 
 cli.parse()
