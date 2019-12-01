@@ -4,7 +4,7 @@
 
 ## 構成図
 
-![構成図](https://plantuml-server.kkeisuke.app/png/UDfLKJrFmq0CtVqh_0SwTCs0seaW0KA2BJ04SlbGqqkLN5Invf0e4mX4CnI1a61222GO2_mOa_mEBkab3TCzsyz-Vhv18knOfECGm39P78rIt3_ncPE6B3v2Ey6aYS3oRS6uZSEzhRgo2i7Q38IP7jSfBn1DZCF996cI5GPhbuamS4_h95zXiCGq449hQGpGYc8l3ZnVz3Qqce7zCd_k5ulxGqxodEIIif_YSbvyvy0ZmJ1ahi38xQoDEBRZaHDDkO8aRobxfEo9vCllrrqvkmB67QnQkw8LMscgpOssMmbc7oGVI4gICr2rzNBQee5TIgMbGFO6kjpErJuDB1UVvVoTickIP_LIotQqfkexgScLsvpag-BzjzgS4j5ClQXw3dQs5Vz6UIHviJO80mNLL_y1QApH3000.png)
+![構成図](https://plantuml-server.kkeisuke.app/svg/RPB1IiD048RlynHpwwala8Eq9oke27fBFQnccovDDoNPKBrc1QiNHR4zAEZ1cuY27grzcB71nt0tsTOAdlBlpCVF_mzff8ebAkj707wB9t4lmzt3BW-oY2Vxo59C5o_mkqnnoR2vir5kgYVuwqArieDo50e5VZCAuqYmSi0g3JL7ONCmI1UerU1lSnM9pd4vb9Ksk1eAfLm4fm6MMR2UYB2hwcikX8TjIVgKz0Vbi_d5UFuv0HahZX7lA8mxAoqG-opf1V5GujVqhXXT0fS1MdZLtkwDkulleP01FshBxzbqVlxm3sZQU4jZaoL_8trFMfCUGSqiiMwJLA2jxU4gGlh6YlobPEr-QUowUrZSlXVZLyglI9zG_cYh6k_Isg7kUCRQNc92-jbmVy-mk2zYAmjZ-zdRsZJyDUadqcU_fu26aUQl-040.svg)
 
 ## コミット先
 
@@ -16,7 +16,7 @@ https://hatebu.kkeisuke.com/
 
 ## セットアップ & ビルド
 
-環境変数は `env.js.sample` から `env.js` を作成し、`GITHUB_API_TOKEN` を追加します。
+環境変数は `env.js.sample` から `env.js` を作成し、`GITHUB_API_TOKEN` などを追加します。
 
 ```shell
 # webpack ビルド
@@ -32,6 +32,11 @@ npm run date <日時>
 # 日時を省略した場合は前日が指定されます。
 # 例：npm run push 20180705
 npm run push <日時>
+
+# 指定日時以降の markdown を Algolia index に追加します。
+# 日時を省略した場合は前日が指定されます。
+# 例：npm run algolia 20191201
+npm run algolia <日時>
 
 # 全ブックマークデータを対象に markdown ファイルをローカルに作成します。
 npm run all
