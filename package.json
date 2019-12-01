@@ -9,14 +9,17 @@
   "scripts": {
     "fmt": "prettier --write 'src/**/*.js'",
     "build": "webpack",
+    "watch": "webpack --watch --progress",
     "postinstall": "webpack",
     "push": "node dist/index.js push",
+    "algolia": "node dist/index.js algolia",
     "date": "node dist/index.js date",
     "all": "node dist/index.js all"
   },
   "license": "MIT",
   "dependencies": {
     "@octokit/rest": "^16.20.0",
+    "algoliasearch": "^3.35.1",
     "axios": "^0.18.1",
     "hatebu-mydata-parser": "^1.0.0",
     "lodash": "^4.17.15",

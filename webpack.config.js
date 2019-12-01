@@ -32,7 +32,10 @@ module.exports = {
       GITHUB_REPO: JSON.stringify(env.GITHUB_REPO),
       GITHUB_REF: JSON.stringify(env.GITHUB_REF),
       GITHUB_PATH: JSON.stringify(env.GITHUB_PATH),
-      COMMIT_MSG: JSON.stringify(env.COMMIT_MSG)
+      COMMIT_MSG: JSON.stringify(env.COMMIT_MSG),
+      ALGOLIA_APPLICATION: JSON.stringify(env.ALGOLIA_APPLICATION),
+      ALGOLIA_API_KEY: JSON.stringify(env.ALGOLIA_API_KEY),
+      ALGOLIA_INDEX: JSON.stringify(env.ALGOLIA_INDEX)
     }),
     new webpack.IgnorePlugin(/^encoding$/, /node-fetch/)
   ],

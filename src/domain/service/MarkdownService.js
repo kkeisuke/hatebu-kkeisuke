@@ -39,6 +39,7 @@ export default {
     dates.forEach(date => {
       // Markdown 作成
       markdowns.push({
+        objectID: date, // for Algolia
         path: `${GITHUB_PATH}/${date}.md`,
         content: this.createMarkdown(date, dairyData[date])
       })
