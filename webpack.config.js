@@ -12,6 +12,9 @@ try {
 var webpack = require('webpack')
 
 module.exports = {
+  resolve: {
+    mainFields: ['main']
+  },
   module: {
     rules: [
       {
