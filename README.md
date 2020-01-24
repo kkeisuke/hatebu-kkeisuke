@@ -4,7 +4,7 @@
 
 ## 構成図
 
-![構成図](https://plantuml-server.kkeisuke.app/svg/RPB1IiD048RlynHpwwala8Eq9oke27fBFQnccovDDoNPKBrc1QiNHR4zAEZ1cuY27grzcB71nt0tsTOAdlBlpCVF_mzff8ebAkj707wB9t4lmzt3BW-oY2Vxo59C5o_mkqnnoR2vir5kgYVuwqArieDo50e5VZCAuqYmSi0g3JL7ONCmI1UerU1lSnM9pd4vb9Ksk1eAfLm4fm6MMR2UYB2hwcikX8TjIVgKz0Vbi_d5UFuv0HahZX7lA8mxAoqG-opf1V5GujVqhXXT0fS1MdZLtkwDkulleP01FshBxzbqVlxm3sZQU4jZaoL_8trFMfCUGSqiiMwJLA2jxU4gGlh6YlobPEr-QUowUrZSlXVZLyglI9zG_cYh6k_Isg7kUCRQNc92-jbmVy-mk2zYAmjZ-zdRsZJyDUadqcU_fu26aUQl-040.svg)
+![構成図](https://plantuml-server.kkeisuke.app/svg/ZLD1QnGn6BtdLtpWeNfOVy0Sf4kHRa6aKF0ozP3ToSwacqcMJ4BrEX6iNXJ5xS52HVOcqeBrrjeV4tVrP_WbCnr7yU2SNl9UtlVbVPdDob1jR2a8sQXcNCwffYMKIgf9eLN9m6ZB-bHLq4mTSfd3b8hg3sfC9xDSAokpBIMKXbltuqT8Ec9QpIpiJGgMMS7qOw0LL3ShaXRKC4bXkBiJcMP9qcrkHdOSjt9kI3eKkHASnWtQOBBHgc0udrStqe19wjt2ky--Fe_ROw5oagwN9pykFlhwgw-NtXqrZN33EiOzy-xIkq-HcGYE1SmXDwPjkiM4TDt3GFEyC8DxRTi9x4lldWUN-dhrQh7wTaoaCWm4cnfGqzwz0HwgZDqzg12LLCymM0dVhqxMHwy9anc4O_r2WSSwxTKJu39ZJ_Rbp-khrSiF_n1Y4abdZ5tLNxmxzSxXnN7SoC8WDDKeGsO9z3NUlGkWFelQm7VERGm9hDzVh1VdlduJWWkHNWRpQDrAG-xe6n8vZkDODd6CbJ6g3874oM0Mp0W-VOfeP7E59zxY6BnxyJiA4YO50pllXu2Fvc_3ED2-uTxk46u_iWos7kpSwVdXVF_3Bhm224UXUnsutbOzeqs4-1Fz0W00.svg)
 
 ## コミット先
 
@@ -13,6 +13,11 @@ https://github.com/kkeisuke/hatebu-kkeisuke-client
 ## デプロイ先
 
 https://hatebu.kkeisuke.com/
+
+## 検索サイト、ツール
+
+https://github.com/kkeisuke/hatebu-kkeisuke-search  
+https://github.com/kkeisuke/hatebu-kkeisuke-cli
 
 ## セットアップ & ビルド
 
