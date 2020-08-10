@@ -13,12 +13,7 @@ export default {
    * @return {Promise<any>} { 日付: [はてなブックマーク] }
    */
   async getHatebuDailyData(date) {
-    const hatebuData = await hatebuApi.fetchHatebuData(
-      date ||
-        moment()
-          .subtract(1, 'days')
-          .format('YYYYMMDD')
-    )
+    const hatebuData = await hatebuApi.fetchHatebuData(date || moment().subtract(1, 'days').format('YYYYMMDD'))
 
     return this.parseData(hatebuData)
   },
@@ -38,7 +33,7 @@ export default {
    */
   parseData(hatebuData) {
     return new Promise((resolve, reject) => {
-      const parsedDatas = groupBy(parse(hatebuData), item => {
+      const parsedDatas = groupBy(parse(hatebuData), (item) => {
         return moment(item.date).format('YYYY-MM-DD')
       })
       if (parsedDatas && Object.keys(parsedDatas).length) {

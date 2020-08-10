@@ -13,11 +13,11 @@ export default {
   createMarkdownFile(dairyData) {
     const dates = Object.keys(dairyData)
     // 日毎
-    dates.forEach(date => {
+    dates.forEach((date) => {
       // Markdown 作成
       const markdown = this.createMarkdown(date, dairyData[date])
       // .md ファイル作成
-      fs.writeFile(`./${MD_FILE_PATH}/${date}.md`, markdown, error => {
+      fs.writeFile(`./${MD_FILE_PATH}/${date}.md`, markdown, (error) => {
         if (error) {
           console.log(`${date}.md ファイルが作成できませんでした`)
           console.log(error)
@@ -36,7 +36,7 @@ export default {
     const dates = Object.keys(dairyData)
     const markdowns = []
     // 日毎
-    dates.forEach(date => {
+    dates.forEach((date) => {
       // Markdown 作成
       markdowns.push({
         objectID: date, // for Algolia
@@ -66,7 +66,7 @@ export default {
     markdown += '---\n\n'
 
     // ブックマーク毎
-    bookmarks.forEach(bookmark => {
+    bookmarks.forEach((bookmark) => {
       const comment = bookmark.comment ? `${bookmark.comment}\n` : ''
       const date = moment(bookmark.date).format('YYYY/MM/DD HH:mm:ss')
       markdown += `#### ${bookmark.title}\n${bookmark.url}<br>\n${date}<br>\n${comment}\n\n`
