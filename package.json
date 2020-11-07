@@ -3,7 +3,7 @@
   "description": "kkeisuke's はてなブックマーク",
   "version": "0.1.0",
   "engines": {
-    "node": "10.6.0"
+    "node": "14.15.0"
   },
   "main": "dist/index.js",
   "scripts": {

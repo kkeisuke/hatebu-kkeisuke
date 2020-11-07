@@ -16,7 +16,7 @@ https://hatebu.kkeisuke.com/
 
 ## 検索Webアプリ、CLIツール
 
-https://github.com/kkeisuke/hatebu-kkeisuke-search  
+https://github.com/kkeisuke/hatebu-kkeisuke-search
 https://github.com/kkeisuke/hatebu-kkeisuke-cli
 
 ## セットアップ & ビルド
@@ -51,6 +51,6 @@ npm run all
 
 ```js
 "engines": {
-  "node": "10.6.0"
+  "node": "14.15.0"
 },
 ```
